@@ -7,11 +7,6 @@ export const registerUser = async (req, res) => {
   try {
     const { name, email, password, businessName } = req.body;
 
-    /* console.log("DATOS LLEGAN DE POSTMAN nombre => "+ name)
-    console.log("DATOS LLEGAN DE POSTMAN Correo => "+ email)
-    console.log("DATOS LLEGAN DE POSTMAN password => "+ password)
-    console.log("DATOS LLEGAN DE POSTMAN businessName => "+ businessName) */
-
     // Verifica si el usuario ya existe
     console.log("Verificando si el usuario existe...");
     const existingUser = await User.findOne({ email });
